@@ -315,7 +315,7 @@ class ReactExoplayerView extends FrameLayout implements
         // Setting the player for the playerControlView
         playerControlView.setPlayer(player);
         playerControlView.show();
-        playPauseControlContainer = playerControlView.findViewById(R.id.exo_play_pause_container);
+        // playPauseControlContainer = playerControlView.findViewById(R.id.exo_play_pause_container);
 
         // Invoking onClick event for exoplayerView
         exoPlayerView.setOnClickListener(new OnClickListener() {
@@ -350,7 +350,7 @@ class ReactExoplayerView extends FrameLayout implements
         eventListener = new Player.EventListener() {
             @Override
             public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
-                reLayout(playPauseControlContainer);
+                // reLayout(playPauseControlContainer);
                 //Remove this eventListener once its executed. since UI will work fine once after the reLayout is done
                 player.removeListener(eventListener);
             }
